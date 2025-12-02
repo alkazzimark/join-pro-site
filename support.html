@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Instructions – Join Pro</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
+    .container { max-width: 900px; margin: 0 auto; padding: 24px; background: white; min-height: 100vh; }
+    header { border-bottom: 2px solid #1E3A8A; padding-bottom: 20px; margin-bottom: 30px; }
+    h1 { color: #1E3A8A; font-size: 28px; margin-bottom: 8px; }
+    nav { margin: 20px 0; }
+    nav a { margin-right: 20px; color: #1E3A8A; text-decoration: none; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    h2 { color: #1E3A8A; margin-top: 30px; margin-bottom: 12px; font-size: 20px; border-bottom: 1px solid #e5e5e5; padding-bottom: 8px; }
+    h3 { color: #333; margin-top: 20px; margin-bottom: 8px; font-size: 16px; font-weight: 600; }
+    p { margin-bottom: 12px; }
+    ul, ol { margin-left: 24px; margin-bottom: 12px; }
+    li { margin-bottom: 8px; }
+    .step { background: #f0f4ff; padding: 16px; border-radius: 6px; margin: 16px 0; border-left: 4px solid #1E3A8A; }
+    .tip { background: #fff3cd; padding: 12px; border-radius: 6px; margin: 12px 0; border-left: 4px solid #ff9800; }
+    .warning { background: #ffe6e6; padding: 12px; border-radius: 6px; margin: 12px 0; border-left: 4px solid #dc2626; }
+    .code { background: #f5f5f5; padding: 12px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
+    th { background: #1E3A8A; color: white; font-weight: 600; }
+    tr:nth-child(even) { background: #f9f9f9; }
+    footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; text-align: center; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Help & Instructions – Join Pro</h1>
+    <p>Learn how to use Join Pro effectively in Autodesk Revit</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="support.html">Help & Instructions</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+
+  <h2>Getting Started</h2>
+
+  <h3>Installation</h3>
+  <p>Join Pro is distributed as an Autodesk App Store add-in. Two installer options are provided:</p>
+
+  <table>
+    <tr>
+      <th>Installer Type</th>
+      <th>When to Use</th>
+      <th>Admin Rights Required</th>
+    </tr>
+    <tr>
+      <td><strong>Single-User</strong></td>
+      <td>Personal Revit installation on your computer</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td><strong>Multi-User</strong></td>
+      <td>Corporate deployment; install for all users on a machine</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+
+  <div class="step">
+    <h3>Installation Steps</h3>
+    <ol>
+      <li>Download the appropriate installer (.msi file) from Autodesk App Store</li>
+      <li>Double-click the installer and follow the on-screen prompts</li>
+      <li>Restart Autodesk Revit completely (close all instances)</li>
+      <li>Open Revit → Look for <strong>"Join Pro"</strong> button in the <strong>Manage</strong> tab of the ribbon</li>
+      <li>Click the button to open the Join Pro palette</li>
+    </ol>
+  </div>
+
+  <h2>How to Use Join Pro</h2>
+
+  <h3>Step 1: Open the Palette</h3>
+  <p>Click the <strong>Join Pro</strong> button in the Manage tab of the Revit ribbon. The Join Pro palette appears on the right side of your screen.</p>
+
+  <h3>Step 2: Arrange Priority Order</h3>
+  <p>Join Pro comes with a default priority order:</p>
+  <div class="code">1. Structural Foundations<br>2. Walls<br>3. Columns<br>4. Structural Framing (Beams)<br>5. Floors (Slabs)<br>6. Roofs</div>
+  <p>To change priority:</p>
+  <ul>
+    <li><strong>Click</strong> any element in the list to select it</li>
+    <li><strong>Click ⬆ button</strong> (green, on the right) to move it up (higher priority)</li>
+    <li><strong>Click ⬇ button</strong> (red, on the right) to move it down (lower priority)</li>
+    <li>Higher position = higher priority = will cut lower-priority elements</li>
+  </ul>
+
+  <div class="tip">
+    <strong>💡 Tip:</strong> Use the <strong>↻ Reset to Defaults</strong> button to restore the original priority order at any time.
+  </div>
+
+  <h3>Step 3: Select Elements in Your Model</h3>
+  <p>In Revit, select the structural elements you want to join:</p>
+  <ul>
+    <li>Click elements in the 3D view to select them</li>
+    <li>Hold <strong>Ctrl</strong> to add to selection</li>
+    <li>Hold <strong>Shift</strong> to select a range</li>
+    <li>Use <strong>Tab</strong> to cycle through overlapping elements</li>
+    <li>Use window selection to select multiple elements at once</li>
+  </ul>
+
+  <div class="warning">
+    <strong>⚠ Important:</strong> Make sure selected elements are in the same 3D view. Elements from different views or linked models cannot be joined.
+  </div>
+
+  <h3>Step 4: Execute Join Operation</h3>
+  <p>Click <strong>"JOIN BY PRIORITY"</strong> to join all selected elements according to the priority order you set:</p>
+  <ul>
+    <li>Higher-priority elements will cut through lower-priority elements</li>
+    <li>Multiple joins are processed automatically</li>
+    <li>The operation is undoable (Ctrl+Z)</li>
+  </ul>
+
+  <div class="step">
+    <p><strong>Join Pro will:</strong></p>
+    <ol>
+      <li>Group selected elements by their category (walls, columns, etc.)</li>
+      <li>Detect intersections between elements in different groups</li>
+      <li>Join intersecting elements</li>
+      <li>Set join order so higher-priority elements cut lower-priority ones</li>
+      <li>Display results in the details panel</li>
+    </ol>
+  </div>
+
+  <h2>Other Functions</h2>
+
+  <h3>Unjoin All Selected</h3>
+  <p>Click <strong>"Unjoin All Selected"</strong> to separate all joined elements in your selection from any other elements:</p>
+  <ul>
+    <li>The selected elements are unjoined from everything</li>
+    <li>Elements not selected are unaffected</li>
+    <li>Useful for undoing previous joins or starting fresh</li>
+  </ul>
+
+  <h3>Disallow Beam Joins</h3>
+  <p>Click <strong>"Disallow Beam Joins"</strong> to prevent beam end connections from being automatically joined:</p>
+  <ul>
+    <li>Disallows joins at beam ends (critical for MEP/structural separation)</li>
+    <li>Applied to all structural framing elements in your selection</li>
+    <li>Prevents accidental joins with other geometry</li>
+  </ul>
+
+  <h2>Best Practices</h2>
+
+  <ul>
+    <li><strong>Test on a copy first:</strong> Before running joins on a large model, test on a copy or a small section</li>
+    <li><strong>Work in 3D view:</strong> Joins are computed based on 3D geometry, so use 3D views for best results</li>
+    <li><strong>One view at a time:</strong> Join elements that are in the same 3D view; avoid mixing linked models</li>
+    <li><strong>Use Undo liberally:</strong> If results don't look right, press Ctrl+Z to revert</li>
+    <li><strong>Check intersections:</strong> Join Pro only joins elements that have overlapping bounding boxes</li>
+    <li><strong>Verify manually:</strong> After joining, review the model to ensure joins are correct</li>
+  </ul>
+
+  <h2>Known Limitations</h2>
+
+  <ul>
+    <li><strong>Same view only:</strong> Can only join elements in the active 3D view</li>
+    <li><strong>No linked models:</strong> Cannot join elements from different linked Revit files</li>
+    <li><strong>Bounding box detection:</strong> Elements must have overlapping bounding boxes to be detected for joining</li>
+    <li><strong>Special geometry:</strong> Highly curved or complex geometry may not join automatically</li>
+    <li><strong>System families:</strong> Some system family elements may have restrictions on joining (Revit limitations)</li>
+  </ul>
+
+  <h2>Troubleshooting</h2>
+
+  <h3>❌ "No elements selected!" error</h3>
+  <p><strong>Solution:</strong> Select at least one element in the Revit 3D view before clicking any Join Pro button.</p>
+
+  <h3>❌ No joins occur when clicking "JOIN BY PRIORITY"</h3>
+  <p><strong>Possible causes:</strong></p>
+  <ul>
+    <li>Selected elements don't physically intersect (check with Ctrl+drag bounding box)</li>
+    <li>Elements are in different views (switch to the correct 3D view)</li>
+    <li>Elements are already joined (use "Unjoin All Selected" first)</li>
+    <li>Elements are not joinable (check Revit documentation for your element types)</li>
+  </ul>
+  <p><strong>Solution:</strong> Check the details panel for specific error messages. Verify elements visually in 3D.</p>
+
+  <h3>❌ "Unjoin All Selected" doesn't work with multiple elements</h3>
+  <p><strong>Solution:</strong> This has been fixed in the latest version. Update Join Pro from the Autodesk App Store.</p>
+
+  <h3>❌ Join Pro button doesn't appear in Revit</h3>
+  <p><strong>Possible causes:</strong></p>
+  <ul>
+    <li>Installation failed (reinstall the .msi)</li>
+    <li>Revit was not fully restarted after installation</li>
+    <li>Running an incompatible Revit version (Join Pro supports 2021–2026)</li>
+  </ul>
+  <p><strong>Solution:</strong> Reinstall Join Pro. Ensure Revit is completely closed before installing.</p>
+
+  <h2>System Requirements</h2>
+
+  <table>
+    <tr>
+      <th>Requirement</th>
+      <th>Minimum</th>
+    </tr>
+    <tr>
+      <td>Autodesk Revit</td>
+      <td>2021, 2022, 2023, 2024, 2025, 2026</td>
+    </tr>
+    <tr>
+      <td>Operating System</td>
+      <td>Windows 10 or Windows 11</td>
+    </tr>
+    <tr>
+      <td>.NET Framework</td>
+      <td>.NET Framework 4.8 or later</td>
+    </tr>
+    <tr>
+      <td>Disk Space</td>
+      <td>~50 MB</td>
+    </tr>
+    <tr>
+      <td>RAM</td>
+      <td>No additional requirements beyond Revit</td>
+    </tr>
+  </table>
+
+  <h2>Uninstallation</h2>
+
+  <ol>
+    <li>Go to <strong>Windows Settings → Apps & Features</strong></li>
+    <li>Find <strong>"Join Pro"</strong> in the list</li>
+    <li>Click <strong>"Uninstall"</strong></li>
+    <li>Follow the uninstaller prompts</li>
+    <li>Restart Revit</li>
+  </ol>
+
+  <p>After uninstallation, the Join Pro button will no longer appear in Revit.</p>
+
+  <h2>Support & Contact</h2>
+
+  <p>For technical support, feature requests, or bug reports:</p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:alkazzimark@gmail.com">alkazzimark@gmail.com</a></li>
+    <li><strong>Subject line example:</strong> "Join Pro [Issue/Feature/Bug]"</li>
+    <li><strong>Response time:</strong> Typically within 24–48 hours during business days</li>
+  </ul>
+
+  <div class="tip">
+    <strong>💡 Pro Tip:</strong> When reporting an issue, include:
+    <ul>
+      <li>Your Revit version (2021, 2022, etc.)</li>
+      <li>Windows OS version (10 or 11)</li>
+      <li>A description of what you were doing when the issue occurred</li>
+      <li>Any error messages you received</li>
+    </ul>
+  </div>
+
+  <h2>Frequently Asked Questions (FAQ)</h2>
+
+  <h3>Q: Can I join elements from different linked Revit files?</h3>
+  <p><strong>A:</strong> No. Join Pro only works within a single Revit file. Elements from linked files must be joined using Revit's native join tools.</p>
+
+  <h3>Q: Is Join Pro free?</h3>
+  <p><strong>A:</strong> Yes! Join Pro is available for free download from the Autodesk App Store.</p>
+
+  <h3>Q: Will Join Pro work with Revit 2020 or earlier?</h3>
+  <p><strong>A:</strong> No. Join Pro supports Revit 2021 and later. For older versions, use Revit's native join tools.</p>
+
+  <h3>Q: Can I use Join Pro in Revit for Mac?</h3>
+  <p><strong>A:</strong> No. Join Pro is currently Windows only (Revit for Mac has different API constraints).</p>
+
+  <h3>Q: Can I undo Join Pro operations?</h3>
+  <p><strong>A:</strong> Yes! All operations are fully reversible with Ctrl+Z (undo) or the Edit menu.</p>
+
+  <h3>Q: Does Join Pro modify my project file automatically?</h3>
+  <p><strong>A:</strong> No. Join Pro performs operations within a transaction. You must save your project manually to persist changes. Use Ctrl+S or File → Save.</p>
+
+  <footer>
+    <p>&copy; 2025 Join Pro by Mark Alkazzi. All rights reserved.</p>
+    <p>Join Pro is a third-party add-in for Autodesk Revit and is not affiliated with or endorsed by Autodesk, Inc.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
